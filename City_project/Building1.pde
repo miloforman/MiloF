@@ -16,7 +16,7 @@ class Building1{
     dx = startingDx;
   }
   void drawBuilding1(){
-    fill(r,g,b);
+    fill(13,169,148);
     rectMode(CENTER);
     rect(x,y,w,h,dx,r,g,b);
     fill(255,255,255);

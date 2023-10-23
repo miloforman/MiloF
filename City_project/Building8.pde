@@ -1,4 +1,4 @@
-class Building2{
+class Building8{
   int x;
   int y;
   int w;
@@ -8,19 +8,21 @@ class Building2{
   int g;
   int b;
   
-  Building2(int startingX, int startingY, int startingW, int startingH, int startingDx){
+  Building8(int startingX, int startingY, int startingW, int startingH, int startingDx){
     x = startingX;
     y = startingY;
     w = startingW;
     h = startingH;
     dx = startingDx;
   }
-  void drawBuilding2(){
-    fill(192,19,77);
+  void drawBuilding8(){
+    fill(136,84,171);
     rectMode(CENTER);
     rect(x,y,w,h,dx,r,g,b);
+    fill(150,150,150);
     tint(10,100,10);
     fill(51,51,51);
-    rect(x+10,y+125,w-110,h-275,dx,r,g,b);
+    rect(x+10,y+215,w-250,h-260,dx,r,g,b);
+    fill(255,255,255);
   }
 }
