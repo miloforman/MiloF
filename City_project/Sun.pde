@@ -23,10 +23,10 @@ class sun{
   }
   void drawsun(){
   ellipse(x,y,120,120);
-   //this is how i did it 
+   //How sun dx and dy values work: 
     x=x+dx;
     y=y+dy;
-    // Make the sun rise and set
+    //Making the sun rise and set
   x+=1;
   if (x > width) {
     x=0;

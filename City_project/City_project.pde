@@ -46,11 +46,13 @@ void setup(){
 
 void draw(){
   //This changes the background of the city to a blue sky like color
+  //timerr,timerb, and timerg all represent the values of red blue and green depending on what value the timer is at
   background(timerr,timerg,timerb);
   if (daylightcounter == 0){
   timerr += -0.708;
   timerg += -0.708;
   timerb += -0.708;
+  //The daylightcounter at 1 represents nighttime, and 0 daytime
   if (timerb < 0){
     daylightcounter = 1;
   }
@@ -75,6 +77,7 @@ void draw(){
   road1.drawRoad1();
   car1.drawCar();
   car2.drawCar2();
+  //This if statement changes the sun to a moon depending on the value of the daylightcounter variable
   if (daylightcounter == 1){
     fill(255);
     sun1.drawsun();
