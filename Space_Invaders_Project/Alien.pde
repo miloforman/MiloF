@@ -1,15 +1,16 @@
-class Star{
+class Alien{
   int x,y,w,h,dx;
   
   
-  Star(int startingX,int startingY,int startingW,int startingH, int startingDx){
+  Alien(int startingX,int startingY,int startingW,int startingH, int startingDx){
     x = startingX;
     y = startingY;
     w = startingW;
     h = startingH;
     dx = startingDx;
   }
-  void drawStar(){
+  void drawAlien(){
+    fill(7,255,20);
     ellipse(x,y,w,h);
     x = x +dx;
   }
@@ -19,7 +20,7 @@ class Star{
        playerLaser l = playerLaserList.get(i);
        if(l.x > x - w/2 && l.x < x + w/2 && l.y > y - h/2 && l.y < y + h/2){                  //lx and ly are basically mouseX and mouseY, serves as a bounding box to check if the laser is inside of thex and y of the alien
        playerLaserList.remove(l);
-       starlist.remove(this);
+       alienlist.remove(this);
        
        }
     }

@@ -10,6 +10,7 @@ class playerLaser{
   }
   
   void drawPlayerLaser(){
+    fill(240,29,0);
     rect(x,y,w,h);
     y = y + dy;
   }

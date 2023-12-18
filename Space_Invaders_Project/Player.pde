@@ -15,7 +15,8 @@ class Player{
   
   void drawPlayer(){
     if(lives >0){
-    rect(x,y,w,h);
+      image(img,x,y,150,150);
+    //rect(x,y,w,h);
     }
   }
   
