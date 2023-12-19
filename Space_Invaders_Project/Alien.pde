@@ -11,7 +11,8 @@ class Alien{
   }
   void drawAlien(){
     fill(7,255,20);
-    ellipse(x,y,w,h);
+    //ellipse(x,y,w,h);
+    image(img1,x,y,w+15,h);
     x = x +dx;
   }
   
@@ -21,7 +22,6 @@ class Alien{
        if(l.x > x - w/2 && l.x < x + w/2 && l.y > y - h/2 && l.y < y + h/2){                  //lx and ly are basically mouseX and mouseY, serves as a bounding box to check if the laser is inside of thex and y of the alien
        playerLaserList.remove(l);
        alienlist.remove(this);
-       
        }
     }
   }

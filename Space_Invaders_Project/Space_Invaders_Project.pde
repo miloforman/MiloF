@@ -3,7 +3,8 @@ ArrayList<playerLaser> playerLaserList;
 ArrayList<AlienLaser> AlienLaserList;
 ArrayList<Barrier> BarrierList;
 Player p1;
-PImage img;
+Healthbar hb1,hb2,hb3;
+PImage img,img1,img2;
 
 void setup(){
   size(1000,1000);
@@ -12,7 +13,12 @@ void setup(){
   AlienLaserList = new ArrayList<AlienLaser>();
   BarrierList = new ArrayList<Barrier>();
   p1 = new Player(200,700,200,100,0);
+  hb1 = new Healthbar(75,45,50,25);
+  hb2 = new Healthbar(125,45,50,25);
+  hb3 = new Healthbar(175,45,50,25);
   img = loadImage("starship.png");
+  img1 = loadImage("alienfs.png");
+  img2 = loadImage("blueship.png");
   
   for(int x = 100; x < 1000; x += 250){
     BarrierList.add(new Barrier(x,600,100,50));
@@ -28,6 +34,9 @@ void setup(){
 void draw(){
   background(0);
   p1.drawPlayer();
+  hb1.drawHealthbar();
+  hb2.drawHealthbar();
+  hb3.drawHealthbar();
   p1.AlienlaserCheck();
   println(p1.health,p1.lives);
   for(int i=0; i<alienlist.size(); i++){
@@ -36,15 +45,13 @@ void draw(){
     s.laserCheck();
     
     if(random(0,100)<0.1){
-      AlienLaserList.add(new AlienLaser(s.x,s.y,22,75,15));
+      AlienLaserList.add(new AlienLaser(s.x,s.y,10,60,15));
     }
     
     if(s.x >800 || s.x <100){
       for(int d=0; d <alienlist.size(); d++){
         Alien c = alienlist.get(d); //d is the variable used for a loop
         c.dx = -c.dx;
-      
-     
   }
   }
 }
@@ -74,7 +81,7 @@ if(key == 'a'){
   p1.moveRight();
   }
   if(key == ' '){
-  playerLaserList.add(new playerLaser(p1.x,p1.y,15,65,-20));
+  playerLaserList.add(new playerLaser(p1.x+90,p1.y-10,15,65,-20));
   }
  
  }

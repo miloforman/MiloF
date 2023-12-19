@@ -15,7 +15,8 @@ class Player{
   
   void drawPlayer(){
     if(lives >0){
-      image(img,x,y,150,150);
+      //image(img,x,y,150,150);
+      image(img2,x,y,w-10,h-10);
     //rect(x,y,w,h);
     }
   }
@@ -39,11 +40,8 @@ class Player{
        if(health == 0){
          lives -= 1;
          health = 90;
+           }
          }
        }
-    }
-  }
-  
-  
-  
-}
+     }
+   }
