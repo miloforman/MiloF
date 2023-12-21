@@ -19,7 +19,16 @@ class Barrier{
       if(l.x > x - w/2 && l.x < x + w/2 && l.y > y - h/2 && l.y < y + h/2){
         AlienLaserList.remove(l);
         BarrierList.remove(this);
+          }
         }
       }
-    }  
-  }
+    void BarrierCheckPL(){
+      for(int i = 0; i < playerLaserList.size(); i++){
+      playerLaser pl = playerLaserList.get(i);
+      if(pl.x > x - w/2 && pl.x < x + w/2 && pl.y > y - h/2 && pl.y < y + h/2){
+        playerLaserList.remove(pl);
+        BarrierList.remove(this);
+          }
+        }
+      }
+    }

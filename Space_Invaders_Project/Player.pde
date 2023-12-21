@@ -9,14 +9,14 @@ class Player{
     w = startingW;
     h = startingH;
     dx = startingDx;
-    health = 90;
+    health = 30;
     lives = 3;
   }
   
   void drawPlayer(){
     if(lives >0){
       //image(img,x,y,150,150);
-      image(img2,x,y,w-10,h-10);
+      image(img2,x,y,w-60,h-45);
     //rect(x,y,w,h);
     }
   }
@@ -39,7 +39,7 @@ class Player{
        health -= 30;
        if(health == 0){
          lives -= 1;
-         health = 90;
+         health = 30;
            }
          }
        }

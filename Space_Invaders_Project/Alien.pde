@@ -12,7 +12,7 @@ class Alien{
   void drawAlien(){
     fill(7,255,20);
     //ellipse(x,y,w,h);
-    image(img1,x,y,w+15,h);
+    image(img1,x,y,w-5,h-20);
     x = x +dx;
   }
   

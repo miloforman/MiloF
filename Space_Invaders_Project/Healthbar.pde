@@ -10,8 +10,9 @@ class Healthbar{
   
   void drawHealthbar(){
     if(p1.lives > 0){
-      fill(240,29,0);
-      rect(x,y,w,h);
+      //fill(240,29,0);
+      //rect(x,y,w,h);
+      image(img3,x,y,w+5,h+20);
       }
     }
   }
