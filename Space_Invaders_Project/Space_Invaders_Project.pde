@@ -1,3 +1,6 @@
+//SPACE TO SHOOT, W,A,S,D to move
+//WHEN YOU'RE HIT 3 TIMES, YOU LOSE AND YOUR PLAYER DISSAPEARS
+
 ArrayList<Alien> alienlist;
 ArrayList<playerLaser> playerLaserList;
 ArrayList<AlienLaser> AlienLaserList;
@@ -75,9 +78,10 @@ void draw(){
       for(int d=0; d <alienlist.size(); d++){
         Alien c = alienlist.get(d); //d is the variable used for a loop
         c.dx = -c.dx;
+        c.y = c.y +10;
+      }
+    }
   }
-  }
-}
 for(int i=0; i<AlienLaserList.size(); i++){
   AlienLaser al = AlienLaserList.get(i);
   al.drawAlienLaser();
@@ -95,7 +99,7 @@ for(int i=0; i<AlienLaserList.size(); i++){
     playerLaserList.get(m).drawPlayerLaser();
     playerLaserList.get(m).offScreenCheck();
   }
- }
+}
 void keyPressed(){
 if(key == 'a'){
   p1.moveLeft();
